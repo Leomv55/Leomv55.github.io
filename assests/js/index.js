@@ -1,4 +1,40 @@
+const profileHeader = document.getElementById("profile-header");
 const sections = document.getElementById("sections");
+const htmlTitle = document.getElementsByName("title");
+
+const renderProfileHeader = () => {
+    const profileHeader = DATA.profile_header || {};
+    const socialIcons = DATA.profile_header.social_connect || [];
+    return (
+        `<div class="row justify-content-center">
+            <img src="${profileHeader.profile_picture}" class="rounded-circle avatar" alt="Avatar">
+        </div>
+        <div class="row justify-content-center">
+            <div class="text-center mt-4">
+                <div class="name" style="font-size: 1.5rem;">${profileHeader.name}</div>
+                <div class="text-muted" style="font-weight: 200;">${profileHeader.current_job}</div>
+                <div class="text-muted" style="font-weight: 200; font-size: 12px;">${profileHeader.phone_number}</div>
+                <div class="social-connect">
+                    ${socialIcons.map((social) => {
+                        return (
+                            `<a href="${social.link}" class="mx-1"><i class="${social.icon}"></i></a>`
+                            )
+                        }
+                    ).join("")
+                }
+                </div>
+            </div>
+        </div>`
+    )
+}
+
+const updateHtmlTitle = () => {
+    const title = DATA.html_title;
+    const htmlTitleElement = document.createElement("title");
+    htmlTitleElement.innerHTML = title;
+    const htmlHeadElement = document.getElementsByTagName("head");
+    htmlHeadElement[0].appendChild(htmlTitleElement);
+}
 
 const sectionTemplate = (section) => {
     const icon = section.icon ? '<i class="' + section.icon + '"></i>' : "";
@@ -63,6 +99,7 @@ const renderSections = () => {
     }
     return sectionDetails.join("");
 }
-
+updateHtmlTitle();
+profileHeader.innerHTML = renderProfileHeader();
 sections.innerHTML = renderSections();
 

@@ -1,4 +1,25 @@
 DATA = {
+    "html_title": "Leo Varghese",
+    "profile_header": {
+        "name": "LEO VARGHESE",
+        "current_job": "Backend Developer at impress.ai",
+        "phone_number": "+91 9746390101",
+        "profile_picture": "assests/images/profilepic.png",
+        "social_connect": [
+            {
+                "icon": "fab fa-github",
+                "link": "https://github.com/Leomv55"
+            },
+            {
+                "icon": "fab fa-gitlab",
+                "link": "https://gitlab.com/leo_george"
+            },
+            {
+                "icon": "fas fa-envelope",
+                "link": "mailto:leomv3@gmail.com"
+            },
+        ]
+    },
     "section_details": [
         [
             {
@@ -96,7 +117,7 @@ DATA = {
                             <div>
                                 <div> Open source projects<div>
                                 <ul class="list-unstyled" style="padding-left:10px;">
-                                    <li>- <a class="text-decoration-none" href="" style='font-weight: 200;font-size: 14px;'>DWM Powerline</a></li>
+                                    <li>- <a class="text-decoration-none" href="https://github.com/Leomv55/dwmbar-powerline" style='font-weight: 200;font-size: 14px;'>DWM Powerline</a></li>
                                     <li>- <a class="text-decoration-none" href="" style='font-weight: 200;font-size: 14px;'>Learn Regex using python</a></li>
                                 </ul>
                             </div>
@@ -108,8 +129,7 @@ DATA = {
                                     <li style='font-weight: 200;font-size: 14px;'>- Integrated the platform with Aon, SHL,PI/PLI ...</li>
                                 </ul>
                             </div>
-                        </div>
-                    `
+                        </div>`
             }
         ]
     ]
