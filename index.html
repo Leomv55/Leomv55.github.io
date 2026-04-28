@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Leo Varghese — Backend Engineer. Python, Django, AWS, LLM integration." />
+  <title>Leo Varghese</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="#terminal" class="nav-logo">leo@portfolio:~$</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-resume"><a href="resume.html" target="_blank" rel="noopener" class="btn btn--outline nav-resume__btn">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== SECTION 1: TERMINAL BOOT ========== -->
+  <section id="terminal" class="section section--terminal">
+    <div class="container">
+      <div id="terminal-window" class="terminal-window">
+        <div class="terminal-titlebar">
+          <span class="terminal-dot terminal-dot--red"></span>
+          <span class="terminal-dot terminal-dot--yellow"></span>
+          <span class="terminal-dot terminal-dot--green"></span>
+          <span class="terminal-title">bash — 80×24</span>
+        </div>
+        <div id="terminal-output" class="terminal-output">
+          <!-- terminal.js will populate this -->
+        </div>
+      </div>
+      <button id="terminal-skip" class="btn btn--ghost terminal-skip">Skip intro ↓</button>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: PROJECTS ========== -->
+  <section id="projects" class="section section--projects">
+    <div class="container">
+      <h2 class="section-heading">Work</h2>
+      <p class="section-sub">Things built. Numbers attached.</p>
+
+      <div class="project-grid">
+
+        <!-- Card 1: Bias Detection -->
+        <article class="project-card" data-project="bias-detection">
+          <h3 class="project-card__title">Bias Detection Filter</h3>
+          <p class="project-card__headline">Built an in-house bias detection filter for OpenSearch — 94% accuracy, 2-second Lambda response.</p>
+          <div class="project-card__meta">
+            <span class="metric">94% accuracy</span>
+          </div>
+          <div class="project-card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">AWS Lambda</span>
+            <span class="tag">Serverless</span>
+            <span class="tag">GraphQL</span>
+          </div>
+          <button class="btn btn--outline project-card__expand" aria-expanded="false">View case study</button>
+          <div class="project-card__detail" hidden>
+            <h4>Problem</h4>
+            <p>OpenSearch results needed bias filtering. A paid vendor (Coactive) handled it — expensive and opaque.</p>
+            <h4>Approach</h4>
+            <p>Reverse-engineered the vendor's approach. Built LangChain evaluators to score outputs. Iterated prompts systematically until 94% accuracy was achieved. Deployed on AWS Lambda via Serverless Framework with GraphQL integration.</p>
+            <h4>Outcome</h4>
+            <p>In-house solution matched commercial accuracy at a fraction of the cost. Also built a prompt-iterator Claude skill for future model migrations — reusable by the team.</p>
+            <h4>Stack</h4>
+            <p>Python · LangChain · AWS Lambda · Serverless Framework · GraphQL</p>
+          </div>
+        </article>
+
+        <!-- Card 2: ARM Migration -->
+        <article class="project-card" data-project="arm-migration">
+          <h3 class="project-card__title">ARM Migration + OpenSearch</h3>
+          <p class="project-card__headline">Migrated OpenSearch from x86 to ARM — benchmarked before migrating, saved $11,000/year.</p>
+          <div class="project-card__meta">
+            <span class="metric">$11k/year saved</span>
+          </div>
+          <div class="project-card__tags">
+            <span class="tag">AWS</span>
+            <span class="tag">OpenSearch</span>
+            <span class="tag">ECS</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Python</span>
+          </div>
+          <button class="btn btn--outline project-card__expand" aria-expanded="false">View case study</button>
+          <div class="project-card__detail" hidden>
+            <h4>Problem</h4>
+            <p>OpenSearch cluster running on x86 — suspected ARM would be cheaper but no data to back it.</p>
+            <h4>Approach</h4>
+            <p>Built a benchmarking script comparing x86 vs ARM on the actual workload. ARM came out ahead. Migrated ECS nodes, updated to ECS-optimised ARM AMIs. Along the way: fixed a 7GB memory issue from an <code>_id</code>-field sorting anti-pattern, migrated CI/CD from Jenkins to GitHub Actions.</p>
+            <h4>Outcome</h4>
+            <p>$11,000/year saved. Currently also leading solo migration from OpenSearch 2 → OpenSearch 3 (derived vector feature saves 40% storage).</p>
+            <h4>Stack</h4>
+            <p>AWS ECS · OpenSearch · CloudFormation · GitHub Actions · Python</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Enterprise Integration Framework -->
+        <article class="project-card" data-project="impress-ai">
+          <h3 class="project-card__title">Enterprise Assessment Integrations</h3>
+          <p class="project-card__headline">Owned end-to-end integration of 7+ enterprise assessment platforms into a production hiring system processing thousands of candidates daily.</p>
+          <div class="project-card__meta">
+            <span class="metric">7+ integrations · thousands of candidates/day</span>
+          </div>
+          <div class="project-card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">DRF</span>
+            <span class="tag">Celery</span>
+            <span class="tag">REST</span>
+            <span class="tag">SOAP</span>
+          </div>
+          <button class="btn btn--outline project-card__expand" aria-expanded="false">View case study</button>
+          <div class="project-card__detail" hidden>
+            <h4>Problem</h4>
+            <p>Enterprise clients needed their assessment platforms — SHL, Aon, Aon Gate, Pulsify, HackerRank, HackerEarth, and others — connected to a production hiring system processing thousands of candidates daily for DBS Bank.</p>
+            <h4>Integrations</h4>
+            <p>Owned the full lifecycle for each vendor integration: scoping → technical documentation → implementation → testing → QA. No handoffs — each went from spec to production under one owner.</p>
+            <h4>Analytics Dashboard</h4>
+            <p>Built a client-facing analytics dashboard with modular architecture, real-time data, and per-client customisation.</p>
+            <h4>Internal Tooling</h4>
+            <p>Built an internal ticketing system integrated with Freshdesk for cross-platform sync. Built an internal test platform so the ops team could self-serve integration verification — no engineering needed for routine checks.</p>
+            <h4>Stack</h4>
+            <p>Python · Django · DRF · Celery · Django Channels · REST · SOAP · PostgreSQL</p>
+          </div>
+        </article>
+
+        <!-- Card 4: OpenSearch 3 Migration -->
+        <article class="project-card" data-project="opensearch-3">
+          <h3 class="project-card__title">OpenSearch 3 Migration</h3>
+          <p class="project-card__headline">Solo migration from OpenSearch 2 to OpenSearch 3 — derived vector feature saves 40% storage.</p>
+          <div class="project-card__meta">
+            <span class="metric">40% storage reduction</span>
+          </div>
+          <div class="project-card__tags">
+            <span class="tag">OpenSearch</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Python</span>
+            <span class="tag">Docker</span>
+          </div>
+          <button class="btn btn--outline project-card__expand" aria-expanded="false">View case study</button>
+          <div class="project-card__detail" hidden>
+            <h4>What</h4>
+            <p>Single-handedly managing migration of production OpenSearch infrastructure from version 2 to version 3 at Thomson Reuters.</p>
+            <h4>Approach</h4>
+            <p>Solo deployment of dependent stacks, bootstrapping the new cluster, and validating behaviour across the migration boundary. Using the derived vector feature in OpenSearch 3 to reduce storage footprint.</p>
+            <h4>Outcome</h4>
+            <p>40% storage reduction from derived vectors vs the previous version. Full migration in progress.</p>
+            <h4>Stack</h4>
+            <p>OpenSearch · AWS ECS · CloudFormation · Python · Docker</p>
+          </div>
+        </article>
+
+      </div><!-- /.project-grid -->
+
+      <!-- Secondary projects -->
+      <div class="other-work">
+        <h3 class="other-work__heading">Other work</h3>
+        <div class="other-work__grid">
+          <div class="other-card">
+            <h4>Gmail Automation Package</h4>
+            <p>Python package to automate Gmail tasks via JSON rules. CLI interface, SQLite3 storage.</p>
+            <div class="project-card__tags"><span class="tag">Python</span><span class="tag">SQLite3</span></div>
+          </div>
+          <div class="other-card">
+            <h4>Vendor Management System</h4>
+            <p>CRUD + performance analysis for vendor and purchase order management. RESTful API.</p>
+            <div class="project-card__tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">DRF</span></div>
+          </div>
+          <div class="other-card">
+            <h4>Video Steganography</h4>
+            <p>CLI tool to embed encrypted text within video frames using consistent hashing.</p>
+            <div class="project-card__tags"><span class="tag">Python</span><span class="tag">OpenCV</span></div>
+          </div>
+          <div class="other-card">
+            <h4>This Portfolio</h4>
+            <p>Runs an LLM entirely in your browser — no server, no API keys. Built with vanilla JS and the BMad Method.</p>
+            <div class="project-card__tags"><span class="tag">Vanilla JS</span><span class="tag">WebLLM</span><span class="tag">GitHub Pages</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: SKILLS / DEPENDENCY GRAPH ========== -->
+  <section id="skills" class="section section--skills">
+    <div class="container">
+      <h2 class="section-heading">Stack</h2>
+      <p class="section-sub">Click a skill to see related projects. Click a project card to see related skills.</p>
+      <div id="dependency-graph" class="dependency-graph">
+        <!-- graph.js will populate this -->
+        <p class="graph-placeholder">[ dependency graph ]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: CONTACT ========== -->
+  <section id="contact" class="section section--contact">
+    <div class="container">
+      <h2 class="section-heading">Contact</h2>
+      <p class="section-sub">Available for backend, infrastructure, and LLM integration work.</p>
+      <div class="contact-block">
+        <div class="contact-block__buttons">
+          <a href="mailto:leomv3@gmail.com" class="btn btn--primary contact-cta">POST /api/hire</a>
+          <a href="resume.html" target="_blank" rel="noopener" class="btn btn--outline contact-resume">↓ Resume</a>
+        </div>
+        <p class="contact-email">
+          <a href="mailto:leomv3@gmail.com" class="contact-email__link">leomv3@gmail.com</a>
+          <span class="contact-divider">·</span>
+          <a href="https://github.com/Leomv55" target="_blank" rel="noopener" class="contact-email__link">GitHub</a>
+          <span class="contact-divider">·</span>
+          <a href="https://www.linkedin.com/in/leo-m-varghese/" target="_blank" rel="noopener" class="contact-email__link">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-version">v1.0.0</span>
+      <a href="https://github.com/Leomv55/Leomv55.github.io" target="_blank" rel="noopener" class="footer-repo">
+        View source on GitHub
+      </a>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING CHAT BUTTON ========== -->
+  <button id="chat-toggle" class="chat-toggle" aria-label="Open AI chat">
+    <svg class="chat-toggle__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <span class="chat-toggle__label">Ask Leo's AI</span>
+  </button>
+
+  <script src="js/terminal.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/llm.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

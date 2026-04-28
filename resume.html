@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leo Varghese — Resume</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 36px 48px;
+    }
+
+    a { color: #1a5fb4; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ── */
+    .resume-header { border-bottom: 2px solid #1a5fb4; padding-bottom: 10px; margin-bottom: 18px; }
+
+    .resume-header h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0d1117;
+    }
+
+    .resume-header .tagline {
+      font-size: 11pt;
+      color: #444;
+      margin-top: 2px;
+    }
+
+    .resume-header .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 8px;
+      font-size: 10pt;
+      color: #333;
+    }
+
+    .resume-header .contacts span::before {
+      content: '';
+    }
+
+    /* ── Section ── */
+    .section { margin-bottom: 20px; }
+
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1a5fb4;
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 14px; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 11pt;
+      color: #0d1117;
+    }
+
+    .job-dates {
+      font-size: 10pt;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    .job-company {
+      font-size: 10pt;
+      color: #444;
+      margin-bottom: 6px;
+    }
+
+    .job-company em {
+      font-style: normal;
+      color: #777;
+    }
+
+    ul.bullets {
+      padding-left: 18px;
+      list-style: disc;
+    }
+
+    ul.bullets li {
+      margin-bottom: 4px;
+      font-size: 10.5pt;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 4px 10px;
+      font-size: 10.5pt;
+    }
+
+    .skills-grid .label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* ── Projects ── */
+    .project { margin-bottom: 10px; }
+
+    .project-name {
+      font-weight: 700;
+      font-size: 10.5pt;
+    }
+
+    .project-meta {
+      font-size: 10pt;
+      color: #555;
+      margin-bottom: 2px;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { padding: 18px 24px; font-size: 10.5pt; }
+      a { color: #1a5fb4; }
+      .no-print { display: none; }
+    }
+
+    /* ── Download bar (screen only) ── */
+    .download-bar {
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10pt;
+      color: #444;
+    }
+
+    .download-bar button {
+      background: #1a5fb4;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 14px;
+      font-size: 10pt;
+      cursor: pointer;
+    }
+
+    .download-bar button:hover { background: #1248a0; }
+  </style>
+</head>
+<body>
+
+  <!-- Download bar (hidden when printing) -->
+  <div class="download-bar no-print">
+    <span>To save as PDF: click Print → Save as PDF</span>
+    <button onclick="window.print()">Print / Save PDF</button>
+  </div>
+
+  <!-- ── Header ── -->
+  <header class="resume-header">
+    <h1>Leo Varghese</h1>
+    <p class="tagline">Backend Engineer — Python · Django · AWS · OpenSearch · LLM Integration</p>
+    <div class="contacts">
+      <span><a href="mailto:leomv3@gmail.com">leomv3@gmail.com</a></span>
+      <span><a href="https://github.com/Leomv55" target="_blank" rel="noopener">github.com/Leomv55</a></span>
+      <span><a href="https://www.linkedin.com/in/leo-m-varghese/" target="_blank" rel="noopener">linkedin.com/in/leo-m-varghese</a></span>
+    </div>
+  </header>
+
+  <!-- ── Summary ── -->
+  <section class="section">
+    <h2 class="section-title">Summary</h2>
+    <p>
+      Backend engineer with 4+ years building production systems in Python and Django. Currently embedded at Thomson Reuters via SII India, working on search infrastructure — OpenSearch migrations, bias detection with LLMs, and infrastructure cost reduction. Comfortable owning work end-to-end across the full lifecycle: design, implementation, deployment, and measurement. Strong on AWS, distributed systems, and LLM integration.
+    </p>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section class="section">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Software Engineer</span>
+        <span class="job-dates">Jan 2025 – Present</span>
+      </div>
+      <p class="job-company">SII India <em>· Embedded at Thomson Reuters</em></p>
+      <ul class="bullets">
+        <li>Built an in-house bias detection filter for OpenSearch results, replacing a paid vendor (Coactive). Achieved <strong>94% accuracy</strong> with a 2-second AWS Lambda response time using Python, LangChain, and Serverless Framework.</li>
+        <li>Migrated OpenSearch cluster from x86 to ARM after benchmarking both architectures on the real workload — saving <strong>$11,000/year</strong> in infrastructure costs.</li>
+        <li>Built reusable Claude skills for prompt iteration and model migration workflows, adopted by the engineering team.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Backend Engineer</span>
+        <span class="job-dates">2021 – Jan 2025</span>
+      </div>
+      <p class="job-company">Impress.ai</p>
+      <ul class="bullets">
+        <li>Owned end-to-end integration of <strong>7+ enterprise assessment platforms</strong> (SHL, Aon, Aon Gate, Pulsify, HackerRank, HackerEarth) into a production hiring system processing <strong>thousands of candidates per day</strong> for DBS Bank.</li>
+        <li>Built a client-facing analytics dashboard with modular architecture, real-time data, and per-client customisation using Django, DRF, and Django Channels.</li>
+        <li>Built an internal test platform enabling the ops team to self-serve integration verification, eliminating routine engineering toil.</li>
+        <li>Integrated internal ticketing with Freshdesk for cross-platform support sync.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ── Skills ── -->
+  <section class="section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <span class="label">Languages</span>
+      <span>Python, Django, Django REST Framework, Celery, Django Channels</span>
+
+      <span class="label">Cloud</span>
+      <span>AWS (Lambda, ECS, CloudFormation, S3), DigitalOcean</span>
+
+      <span class="label">Search</span>
+      <span>OpenSearch (migration, performance tuning, vector search)</span>
+
+      <span class="label">AI / LLM</span>
+      <span>LangChain, LLM/SLM integration, Claude API</span>
+
+      <span class="label">Infra</span>
+      <span>Docker, GitHub Actions, Jenkins, Serverless Framework</span>
+
+      <span class="label">Databases</span>
+      <span>PostgreSQL, Redis, SQLite3</span>
+
+      <span class="label">Observability</span>
+      <span>Sentry, Grafana, Kibana, Loki</span>
+
+      <span class="label">APIs</span>
+      <span>REST, SOAP, GraphQL</span>
+
+    </div>
+  </section>
+
+  <!-- ── Selected Projects ── -->
+  <section class="section">
+    <h2 class="section-title">Selected Projects</h2>
+
+    <div class="project">
+      <p class="project-name">Bias Detection Filter <span style="font-weight:400;color:#555;">— Thomson Reuters (via SII India)</span></p>
+      <p class="project-meta">Python · LangChain · AWS Lambda · Serverless Framework · GraphQL · OpenSearch</p>
+      <p>In-house alternative to a paid bias-detection vendor. Matched commercial accuracy (94%) at a fraction of the cost. Lambda response under 2 seconds.</p>
+    </div>
+
+    <div class="project">
+      <p class="project-name">ARM Migration + OpenSearch Optimisation <span style="font-weight:400;color:#555;">— Thomson Reuters (via SII India)</span></p>
+      <p class="project-meta">AWS ECS · OpenSearch · CloudFormation · GitHub Actions · Python</p>
+      <p>Benchmarked x86 vs ARM on actual production workload; migrated cluster to ARM saving $11k/year. Fixed a 7 GB memory footprint issue. Migrated CI/CD from Jenkins to GitHub Actions.</p>
+    </div>
+
+    <div class="project">
+      <p class="project-name">Enterprise Assessment Integrations <span style="font-weight:400;color:#555;">— Impress.ai / DBS Bank</span></p>
+      <p class="project-meta">Python · Django · DRF · Celery · REST · SOAP · PostgreSQL · Redis</p>
+      <p>Sole owner of 7+ vendor integrations into a hiring platform processing thousands of candidates daily. Delivered analytics dashboard and internal self-serve test tooling.</p>
+    </div>
+
+  </section>
+
+  <!-- ── Internship ── -->
+  <section class="section">
+    <h2 class="section-title">Internship</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Software Developer Intern</span>
+        <span class="job-dates">Summer 2015</span>
+      </div>
+      <p class="job-company">Gxtron Innovations <em>· Mookannur, Kerala</em></p>
+      <ul class="bullets">
+        <li>Helped develop UI for a mirror system using PyQt and HTML.</li>
+        <li>Built an interface to save user data in Firestore using Python and Firebase SDK.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ── Courses & Training ── -->
+  <section class="section">
+    <h2 class="section-title">Courses &amp; Training</h2>
+    <div class="skills-grid">
+      <span class="label">Apr 2026</span>
+      <span>Generative AI: Working with Large Language Models — <em>LinkedIn Learning</em></span>
+
+      <span class="label">2023</span>
+      <span>AWS Cloud Technical Essentials — <em>Coursera</em></span>
+
+      <span class="label">2020</span>
+      <span>Front-End Web Development with React — <em>Coursera</em></span>
+
+      <span class="label">2019</span>
+      <span>Python for Data Science — <em>NPTEL</em></span>
+
+      <span class="label">2019</span>
+      <span>HTML5 &amp; CSS3 Fundamentals — <em>Microsoft Virtual Academy</em></span>
+    </div>
+  </section>
+
+</body>
+</html>
