@@ -11,7 +11,7 @@
     { text: '$ man leo' },
     { text: '' },
     { text: 'NAME', color: 'white' },
-    { text: '    Leo Varghese — Backend Engineer' },
+    { text: '    Leo Varghese — Software Engineer' },
     { text: '' },
     { text: 'SYNOPSIS', color: 'white' },
     { text: '    leo [--python] [--django] [--aws] [--llm]' },
