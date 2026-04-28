@@ -37,7 +37,7 @@
     { text: '    APIs       : REST, SOAP, GraphQL' },
     { text: '' },
     { text: 'SEE ALSO', color: 'white' },
-    { text: '    github(1), linkedin(1), POST /api/hire', color: 'accent' },
+    { text: '    github(1), linkedin(1), leomv3@gmail.com', color: 'accent' },
   ];
 
   function colorClass(color) {

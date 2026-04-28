@@ -52,7 +52,7 @@ Reaches for automation when something is done more than twice. Builds custom Cla
     { q: 'What does Leo work on?', a: 'Currently building search infrastructure at SII India for Thomson Reuters — OpenSearch migrations, bias detection, and infrastructure cost work.' },
     { q: 'What is Leo\'s main stack?', a: 'Python, Django, AWS (Lambda, ECS, CloudFormation), OpenSearch, LangChain. Comfortable with REST, SOAP, GraphQL, and Docker.' },
     { q: 'What are Leo\'s key projects?', a: 'Bias detection filter (94% accuracy, replaced paid vendor), ARM migration ($11k/year saved), 7+ enterprise integrations at Impress.ai, and this portfolio.' },
-    { q: 'How do I contact Leo?', a: 'Hit the POST /api/hire button or scroll to the contact section.' },
+    { q: 'How do I contact Leo?', a: 'Email leomv3@gmail.com or scroll to the contact section.' },
   ];
 
   // ── State ──────────────────────────────────────────────────────────────────
